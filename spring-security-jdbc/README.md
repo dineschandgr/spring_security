@@ -8,5 +8,5 @@ Steps to execute
 
 1. When User accesses the application with the credentials, the spring boot uses filters to intercept the request and calls the AuthenticationManager
 2. The AuthenticationManager calls the AuthenticationProvider class for jdbcAuthentication authentication
-3. The user credentials is compared against the credentials stored in the ldap-data.ldif file
-4. Once credentials are authenticated, user is allowed to login into the authorised url
+3. The user credentials is compared against the credentials stored in the H2 database
+4. Once credentials are authenticated,configure(HttpSecurity http) method in SecurityConfiguration class is called to authorize the user for the entered url
